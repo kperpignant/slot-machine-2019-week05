@@ -1,0 +1,103 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  background-color:rgb(136, 13, 38);
+  margin: 3% 10% 30% 10%;
+}
+
+header{
+  border: solid thick black;
+  text-align: center;
+  background-color: gray;
+}
+header span{
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: xx-large;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 33.333%);
+  grid-template-rows: 40% 40% 20%;
+  margin-top: 40px;
+  grid-gap: 5px;
+  grid-template-areas: 
+  'sonic tails eggman'
+  'b e c'
+  'd d d'
+  ;
+}
+#slot1{
+  grid-area: sonic;
+  border: solid thick black;
+}
+#slot2{
+  grid-area: tails;
+  border: solid thick black;
+}
+#slot3{
+  grid-area: eggman;
+  border: solid thick black;
+}
+.CoinsAvailableCell{
+  grid-area: b;
+  background-color: gray;
+  border: solid thick black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+.CoinsSpentCell{
+  grid-area: c;
+  background-color: gray;
+  border: solid thick black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+.spinRow{
+  grid-area: d;
+  background-color: gray;
+  border: solid thick black;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.emptyDiv{
+  grid-area: e;
+}
+.imgDiv{
+  
+}
+.ringsImg{
+  display: flex;
+  flex-flow: column wrap;
+  height: 35%;
+  width: 35%;
+  object-fit: fill;
+}
+
+.imgClass{
+  height: 50%;
+  width: 50%;
+  object-fit: fill;
+}
+.coinsAvailSpan, .coinsSpentSpan{
+  color: white;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
